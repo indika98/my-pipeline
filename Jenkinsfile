@@ -30,6 +30,20 @@ pipeline {
                 }
             }
    }
+      stage('Animals'){
+         parallel{
+            stage('Dog'){
+               steps{
+                  sh 'echo "Dog"'
+               }
+            }
+            stage('Cat'){
+               steps{
+                  sh 'echo "Cat"'
+               }
+            }
+         }
+      }
       
    }
    
